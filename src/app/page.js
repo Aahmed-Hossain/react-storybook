@@ -7,6 +7,10 @@ import { LuRefreshCcwDot } from "react-icons/lu";
 import { BiSolidVideoRecording } from "react-icons/bi";
 import Typography from "@mui/material/Typography";
 import Paper from '@mui/material/Paper';
+import camera1 from '../../public/camera1.png';
+import camera2 from '../../public/camera2.png';
+import camera3 from '../../public/camera3.png';
+import camera4 from '../../public/camera4.png';
 
 export default function Home() {
   return (
@@ -144,7 +148,7 @@ export default function Home() {
                 </span>
               </Typography>
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-                City:{" "}
+                City:
                 <span style={{ color: "#4F4F4F", fontWeight: "normal" }}>
                   Coimbatore
                 </span>
@@ -250,10 +254,59 @@ export default function Home() {
       </Typography>
     </Paper >
 </div>
-
+{/* Recent Recordings cards */}
 <Typography variant="subtitle1" fontWeight="bold" margin='16px 0px' style={{ fontSize: '1.5rem'}}>
 Recent Recordings
-              </Typography>
+  </Typography>
+
+<div className="flex gap-3">
+<Paper variant="outlined" square style={{ width: '100%', padding: '10px', borderRadius: '5px' }}  >
+
+     <Image className="rounded-md" src={camera1} height={300} width={350}  alt='Recording_0121'>
+     </Image>
+     <Typography  style={{ fontWeight: 'bold' , marginTop:'10px' }}>
+     Recording_0121
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+      Today, 04:42 pm
+      </Typography>
+    </Paper >
+
+    <Paper variant="outlined" square style={{ width: '100%', padding: '10px', borderRadius: '5px' }}  >
+
+     <Image className="rounded-md" src={camera2} height={300} width={350}  alt='Recording_0121'>
+     </Image>
+     <Typography  style={{ fontWeight: 'bold' , marginTop:'10px' }}>
+     Recording_0121
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+      Today, 02:14 pm
+      </Typography>
+    </Paper >
+
+    <Paper variant="outlined" square style={{ width: '100%', padding: '10px', borderRadius: '5px' }}  >
+
+     <Image className="rounded-md" src={camera3} height={300} width={350}  alt='Recording_0121'>
+     </Image>
+     <Typography  style={{ fontWeight: 'bold' , marginTop:'10px' }}>
+     Recording_0121
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+      Today, 02:09 pm
+      </Typography>
+    </Paper >
+    <Paper variant="outlined" square style={{ width: '100%', padding: '10px', borderRadius: '5px' }}  >
+
+     <Image className="rounded-md" src={camera4} height={300} width={350}  alt='Recording_0121'>
+     </Image>
+     <Typography  style={{ fontWeight: 'bold' , marginTop:'10px' }}>
+     Recording_0121
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+      Today, 02:09 pm
+      </Typography>
+    </Paper >
+</div>
       </Box>
       
     </Box>
