@@ -1,33 +1,77 @@
 import React from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import  Box  from '@mui/material/Box';
-import cameraImg from '../../public/bank entrance camera.png'
+import cameraImg from '../../public/bank_entrance_camera.png'
+import Image from "next/image";
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import BuildCircleIcon from '@mui/icons-material/BuildCircle';
+import Button from "@mui/material/Button";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { BiSolidVideoRecording } from "react-icons/bi";
+import { RiBarChartBoxLine } from "react-icons/ri";
+import { TbClipboardPlus } from "react-icons/tb";
+
 const BankEntranceCamera = () => {
   return (
-    <Box className="h-screen flex justify-center items-center  bg-[#E0E0E0]">
-<Card sx={{ maxWidth: 345 }}>
+    <Box className="h-[100%] flex  items-center  bg-[#E0E0E0] py-20 justify-evenly">
+<Card sx={{ maxWidth: 420, fontWeight: 'bold', boxShadow:'25px'}}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={cameraImg}
-          alt="green iguana"
+        <Image
+          height={500}
+          width={600}
+          src={cameraImg}
+          alt="bank_entrance_camera"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography sx={{ fontWeight: 'bold', }} gutterBottom variant="h5" component="div">
+          Bank Entrance-front-view Camera1
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          <Typography variant="body2" className='flex gap-2 items-center' >
+          < BuildCircleIcon/> <span className='text-gray-500  text-lg'>3 Recipes Added</span>
           </Typography>
+          <Typography sx={{marginTop:'6px'}} variant="body2" className='flex gap-2 items-center' >
+          <PendingActionsIcon/> <span className='text-gray-500  text-lg '>today, 04:45pm: Unidentified face detected</span>
+          </Typography>
+          <Typography sx={{marginTop:'6px'}} variant="body2" className='flex gap-2 items-center' >
+          <LocationOnOutlinedIcon/> <span className='text-gray-500  text-lg'>Coimbatore branch</span>
+          </Typography>
+          {/* logo buttons */}
+          <Box sx={{marginTop:'20px',display:'flex', justifyContent:'space-between'}}>
+          <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#21E062",
+                  padding: "2px 4px",
+                  borderRadius: "4px",
+                }}
+              >
+                Active
+              </Button>
+              {/* logo buttons */}
+              <Box className="flex gap-3">
+             <RiDeleteBin6Line className='text-red-500 font-bold text-xl'/>
+             <BiSolidVideoRecording  className=' font-bold text-xl'/>
+             <RiBarChartBoxLine className=' font-bold text-xl'/>
+              </Box>
+          </Box>
         </CardContent>
       </CardActionArea>
     </Card>
+    <Box className="p-3 rounded-lg shadow-lg bg-white">
+        <TbClipboardPlus className='text-3xl font-semibold'/>
+        <Typography variant="body2" color="textSecondary" sx={{ fontSize: '1.2rem',margin:"8px 0px" }}>
+      Recipe Management
+    </Typography>
+        <Typography className='text-end' variant="body2" color="textSecondary">
+        Manage
+      </Typography>
+
+
+    </Box>
     </Box>
   )
 }

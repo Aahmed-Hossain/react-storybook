@@ -30,7 +30,7 @@ export default function Home() {
               >
                 <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
                   VMS
-                </span>{" "}
+                </span>
                 <span style={{ fontSize: "1rem", fontWeight: "bold" }}>
                   / Cameras / Camera Details
                 </span>
