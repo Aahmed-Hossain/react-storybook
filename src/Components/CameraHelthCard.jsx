@@ -5,13 +5,16 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { StyledEngineProvider } from '@mui/material/styles';
 import { GiCctvCamera } from "react-icons/gi";
+import { IoIosWarning } from "react-icons/io";
+import Button from "@mui/material/Button";
+import { BsFillInfoCircleFill } from "react-icons/bs";
 
 const CameraHelthCard = () => {
     const data = [
-        { value: 56, label: 'Super Healthy (56)' },
-        { value: 35, label: 'Healthy (35)' },
-        { value: 27, label: 'Warning (27)' },
-        { value: 6, label: 'Danger (6)' },
+        { value: 56, label: 'Super Healthy (56)',color:'#19A01E' },
+        { value: 35, label: 'Healthy (35)' ,color:'#00DB4A' },
+        { value: 27, label: 'Warning (27)' ,color:'#FB8B34', },
+        { value: 6, label: 'Danger (6)' ,color:'#ED1C24' },
       ];
       const colors = ['#19A01E', '#00DB4A', '#FB8B34', '#ED1C24'];
       
@@ -40,7 +43,8 @@ const CameraHelthCard = () => {
       }
 
    return (
-<Box className=" shadow-lg rounded-lg flex  gap-8 " >
+<Box className="h-screen flex justify-center items-center  bg-[#E0E0E0]">
+<Box className="bg-white shadow-lg rounded-lg flex  gap-8 py-6" >
      <StyledEngineProvider injectFirst>
         {/* StyledEngineProvider is used to override the mui provided styles */}
       <Box className=" w-52" sx={{ padding: 0, margin: 0 }}>
@@ -60,14 +64,73 @@ const CameraHelthCard = () => {
         </PieChart>
       </Box>
     </StyledEngineProvider>
-    <Box  className=" w-full">
-    <Typography className='text-center' variant="h5" style={{ fontWeight: 'bold', alignItems:'center', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <Box  className=" w-full pr-3 flex flex-col space-y-3">
+        {/*  Camera Health header container */}
+   <Box>
+   <Typography className='text-center' variant="h5" style={{ fontWeight: 'bold', alignItems:'center', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
     Camera Health
       </Typography>
-
+   </Box>
+ {/*  total camera  container */}
+ <Box className="bg-gray-300 rounded-md  flex items-center gap-3 p-3">
+    <GiCctvCamera className='text-blue-500 text-2xl'/>
+ <Typography  style={{ fontWeight: 'bold' }}>
+ Totally 124 Cameras are in 9 NVRs and installed in 12 Locations
+      </Typography>
+ </Box>
+  {/*  warnig camera  container */}
+ <Box className="bg-[#FFBFCC] rounded-md  flex justify-between gap-3 p-3">
+    <Box className="flex items-center gap-3 ">
+    <IoIosWarning className='text-blue-500 text-2xl'/>
+ <Typography  style={{ fontWeight: 'bold' }}>
+ Totally 124 Cameras are in 9 NVRs and installed in 12 Locations
+      </Typography>
     </Box>
-    
+    <Button
+            variant=""
+            color="default"
+            size="medium"
+            style={{
+              borderRadius: "4px",
+              padding: "6px",
+              backgroundColor: "white",
+            }}
+          >
+              View Cameras
+           
+          </Button>
+ </Box>
+{/* camera statistics */}
+<Box className="flex gap-6">
+    {
+        data.map((item,idx)=> (
+            <Box key={idx} className="flex items-center gap-1">
+            
+            <Typography
+              sx={{
+                backgroundColor: item.color,
+                width: 20,
+                height: 20,
+                borderRadius: '50%',
+                display: 'inline-block',
+                marginRight: '2px',
+            }}
+           
+            />
+          
+           <Typography variant="subtitl" fontWeight="bold" gutterBottom>
+           {item.label}
+           </Typography>
+           <BsFillInfoCircleFill className='text-gray-500'/>
+           
+            </Box>
+           
+        ))
+    }
+</Box>
     </Box>
+    </Box>
+</Box>
   );
 }
 
