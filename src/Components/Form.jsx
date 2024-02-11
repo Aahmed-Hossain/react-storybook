@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const Form = () => {
-
   return (
    <Box className="h-[100%] flex items-center justify-center  bg-[#E0E0E0] py-20 ">
      <Box className="p-16 shadow-lg bg-white rounded-lg">
