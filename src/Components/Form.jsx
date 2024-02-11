@@ -2,6 +2,7 @@ import React from 'react';
 import { FormControl, TextField } from '@mui/material';
 import  Box  from '@mui/material/Box';
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const Form = () => {
 
@@ -56,7 +57,65 @@ const Form = () => {
                 variant="h6"
                 style={{ fontSize: "1rem", fontWeight: "semibold",textAlign:'start', margin:'10px 0px'}}
               > Select Number of Locations
-              </Typography>
+     </Typography>
+     {/* select buttons */}
+     <Box className="flex gap-4">
+     <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#E7E0EC",
+                  padding: "4px 12px",
+                  borderRadius: "4px",
+                  color:'black'
+                }}
+              >
+                1-10
+              </Button>
+     <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#E7E0EC",
+                  padding: "4px 12px",
+                  borderRadius: "4px",
+                  color:'black'
+                }}
+              >
+                10-50
+              </Button>
+     <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#333333",
+                  padding: "4px 12px",
+                  borderRadius: "4px",
+                  color:'white'
+                }}
+              >
+                50-150
+              </Button>
+     <Button
+                variant="contained"
+                style={{
+                  backgroundColor: "#E7E0EC",
+                  padding: "4px 12px",
+                  borderRadius: "4px",
+                  color:'black'
+                }}
+              >
+                150+
+              </Button>
+     </Box>
+     <Button sx={{marginTop:'20px', width:'100%'}}
+                variant=""
+                style={{
+                  backgroundColor: "#333333",
+                  padding: "8px 12px",
+                  borderRadius: "4px",
+                  color:'white'
+                }}
+              >
+               CONTINUE
+              </Button>
     </Box>
    </Box>
   );
