@@ -12,6 +12,7 @@ import camera2 from "../../public/camera2.png";
 import camera3 from "../../public/camera3.png";
 import camera4 from "../../public/camera4.png";
 
+
 export default function Home() {
   return (
     <Box className="px-2 md:px-0 lg:px-12 pt-4 ">
