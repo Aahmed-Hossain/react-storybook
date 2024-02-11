@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const Form = () => {
+  const industries = ['Industry 1', 'Industry 2', 'Industry 3']
   return (
    <Box className="h-[100%] flex items-center justify-center  bg-[#E0E0E0] py-20 ">
      <Box className="p-16 shadow-lg bg-white rounded-lg">
@@ -20,28 +21,28 @@ const Form = () => {
               </Typography>
         <TextField
       id="filled-basic"
-      style={{marginTop:'10px'}}
+      style={{margin: '10px 0'}}
       label="Your Name"
       variant="filled"
       fullWidth
       InputProps={{
-      style: { backgroundColor: '#E7E0EC',marginTop:'12px' },
+      style: { backgroundColor: '#E7E0EC',margin: '10px 0' },
       }}
     />
         <TextField
-        style={{marginTop:'20px'}}
+        style={{margin: '10px 0'}}
       id="filled-basic"
       label="Company Name"
       variant="filled"
       fullWidth
-      marginTop='20px'
+      margin = '10px 0'
       InputProps={{
       style: { backgroundColor: '#E7E0EC'  },
       }}
     />
      <TextField
       id="filled-basic"
-      style={{marginTop:'20px'}}
+      style={{margin: '10px 0'}}
       label="Select Industry"
       variant="filled"
       select
@@ -104,7 +105,7 @@ const Form = () => {
                 150+
               </Button>
      </Box>
-     <Button sx={{marginTop:'20px', width:'100%'}}
+     <Button sx={{margin: '10px 0', width:'100%'}}
                 variant=""
                 style={{
                   backgroundColor: "#333333",

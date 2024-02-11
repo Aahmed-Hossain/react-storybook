@@ -24,14 +24,12 @@ const BankEntranceCamera = () => {
       alignItems: "center",
       backgroundColor: "#E0E0E0",
       paddingY: "100px",
-      // paddingX: "10px",
       justifyContent: "space-evenly",
     }}
-
-    //  className="h-[100%] flex  items-center  bg-[#E0E0E0] py-20 justify-evenly"
      >
       <Card sx={{ maxWidth: 420, fontWeight: "bold", boxShadow: "25px" }}>
-        <CardActionArea>
+        <CardActionArea 
+        >
           <Image
             height={500}
             width={600}
@@ -48,7 +46,7 @@ const BankEntranceCamera = () => {
               Bank Entrance-front-view Camera1
             </Typography>
             <Typography variant="body2" className="flex gap-2 items-center">
-              <HiOutlineClipboardDocumentList className="text-2xl" />{" "}
+              <HiOutlineClipboardDocumentList className="text-2xl" />
               <span className="text-gray-500  text-lg">3 Recipes Added</span>
             </Typography>
             <Typography
@@ -56,7 +54,7 @@ const BankEntranceCamera = () => {
               variant="body2"
               className="flex gap-2 items-center"
             >
-              <PendingActionsIcon />{" "}
+              <PendingActionsIcon />
               <span className="text-gray-500  text-lg ">
                 today, 04:45pm: Unidentified face detected
               </span>
@@ -66,7 +64,7 @@ const BankEntranceCamera = () => {
               variant="body2"
               className="flex gap-2 items-center"
             >
-              <LocationOnOutlinedIcon />{" "}
+              <LocationOnOutlinedIcon />
               <span className="text-gray-500  text-lg">Coimbatore branch</span>
             </Typography>
             {/* logo buttons */}
