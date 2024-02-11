@@ -70,8 +70,6 @@ const BankEntranceCamera = () => {
         <Typography className='text-end' variant="body2" color="textSecondary">
         Manage
       </Typography>
-
-
     </Box>
     </Box>
   )

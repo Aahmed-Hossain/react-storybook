@@ -52,18 +52,18 @@ export default function Home() {
         {/* button container */}
         <div className=" space-x-4">
           <Button
-            style={{ color: "#4F4F4F", borderColor: "#4F4F4F" }}
+            style={{ color: "#4F4F4F", borderColor: "#4F4F4F", textTransform:'none'}}
             variant="outlined"
           >
             Edit Camera
           </Button>
           <Button
-            style={{ color: "#4F4F4F", borderColor: "#4F4F4F" }}
+            style={{ color: "#4F4F4F", borderColor: "#4F4F4F" , textTransform:'none'}}
             variant="outlined"
           >
             Deactivate
           </Button>
-          <Button variant="outlined" color="error">
+          <Button variant="outlined" color="error" style={{ textTransform:'none'}}>
             Delete Camera
           </Button>
         </div>
@@ -127,6 +127,7 @@ export default function Home() {
                   backgroundColor: "#21E062",
                   padding: "2px 4px",
                   borderRadius: "4px",
+                  textTransform: 'none'
                 }}
               >
                 Active

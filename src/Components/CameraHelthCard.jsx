@@ -94,6 +94,7 @@ const CameraHelthCard = () => {
               borderRadius: "4px",
               padding: "6px",
               backgroundColor: "white",
+              textTransform: "none",
             }}
           >
               View Cameras
