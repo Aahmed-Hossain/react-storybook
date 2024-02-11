@@ -8,12 +8,12 @@ import cameraImg from '../../public/bank_entrance_camera.png'
 import Image from "next/image";
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 import Button from "@mui/material/Button";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiSolidVideoRecording } from "react-icons/bi";
 import { RiBarChartBoxLine } from "react-icons/ri";
 import { TbClipboardPlus } from "react-icons/tb";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 
 const BankEntranceCamera = () => {
   return (
@@ -31,7 +31,7 @@ const BankEntranceCamera = () => {
           Bank Entrance-front-view Camera1
           </Typography>
           <Typography variant="body2" className='flex gap-2 items-center' >
-          < BuildCircleIcon/> <span className='text-gray-500  text-lg'>3 Recipes Added</span>
+          < HiOutlineClipboardDocumentList className='text-2xl'/> <span className='text-gray-500  text-lg'>3 Recipes Added</span>
           </Typography>
           <Typography sx={{marginTop:'6px'}} variant="body2" className='flex gap-2 items-center' >
           <PendingActionsIcon/> <span className='text-gray-500  text-lg '>today, 04:45pm: Unidentified face detected</span>
@@ -47,6 +47,7 @@ const BankEntranceCamera = () => {
                   backgroundColor: "#21E062",
                   padding: "2px 4px",
                   borderRadius: "4px",
+                  textTransform: "none",
                 }}
               >
                 Active

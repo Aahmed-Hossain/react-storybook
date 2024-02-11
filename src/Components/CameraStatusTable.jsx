@@ -107,7 +107,6 @@ const CameraStatusTable = () => {
               {row.status}
             </Button>
               }
-                
                 </StyledTableCell>
               <StyledTableCell align="center">
                 <span className='flex'> <FaRegEdit className='text-xl font-bold'/> <RiDeleteBin6Line className='text-xl font-bold text-red-500 ml-2'/></span>
