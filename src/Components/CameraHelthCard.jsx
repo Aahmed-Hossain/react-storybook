@@ -36,7 +36,7 @@ const CameraHelthCard = () => {
         return (
           <StyledText x={left + width / 2} y={top + height / 2}>
           <tspan fontSize="2rem" fontWeight="bold">124</tspan>
-        <tspan x={left + width / 2} dy="1.4em" fontSize="1.1rem" fontWeight="normal">Camera</tspan>
+        <tspan x={left + width / 2} dy="1.4em" fontSize="1.1rem" fontWeight="normal">Cameras</tspan>
             {children}
           </StyledText>
         );
@@ -81,7 +81,7 @@ const CameraHelthCard = () => {
   {/*  warnig camera  container */}
  <Box className="bg-[#FFBFCC] rounded-md  flex justify-between gap-3 p-3">
     <Box className="flex items-center gap-3 ">
-    <IoIosWarning className='text-blue-500 text-2xl'/>
+    <IoIosWarning className='text-red-600 text-2xl'/>
  <Typography  style={{ fontWeight: 'bold' }}>
  Totally 124 Cameras are in 9 NVRs and installed in 12 Locations
       </Typography>
