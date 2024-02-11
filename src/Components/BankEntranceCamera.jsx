@@ -17,7 +17,19 @@ import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 
 const BankEntranceCamera = () => {
   return (
-    <Box className="h-[100%] flex  items-center  bg-[#E0E0E0] py-20 justify-evenly">
+    <Box
+    sx={{
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      backgroundColor: "#E0E0E0",
+      paddingY: "100px",
+      // paddingX: "10px",
+      justifyContent: "space-evenly",
+    }}
+
+    //  className="h-[100%] flex  items-center  bg-[#E0E0E0] py-20 justify-evenly"
+     >
       <Card sx={{ maxWidth: 420, fontWeight: "bold", boxShadow: "25px" }}>
         <CardActionArea>
           <Image
